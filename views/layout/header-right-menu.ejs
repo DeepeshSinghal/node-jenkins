@@ -1,0 +1,21 @@
+<div class="right-wrapper">
+<div class="right-side-header">
+<a class="toggle-button">
+    <i class="fa fa-bars"></i>
+</a>
+<div class="header-right-menu">
+    <ul class="information-menu">
+        <li> <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> 
+            <% if(userSession.profile_pic){ %>
+                <img src="<%=assetsLocation%>/images/users/profile/<%=userSession.profile_pic%>" alt="" />
+            <% }else{ %>
+                <img src="<%=assetsLocation%>/images/photos/user-avatar.png" alt="" />
+            <% }%>
+            <%= userSession.first_name + " " + userSession.middle_name + " " + userSession.last_name  %> <span class="caret"></span> </a>
+            <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                <li><a href="/user/profile"><i class="fa fa-user"></i> Profile</a></li>
+                <li><a href="/user/logout"><i class="fa fa-sign-out"></i> Log Out</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
