@@ -1,0 +1,10 @@
+pipeline {
+    agent any { image 'node:8' } 
+    stages {
+        stage('build') {
+            steps {
+                bat 'npm --version'
+            }
+        }
+    }
+}
